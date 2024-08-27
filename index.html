@@ -1,35 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="css\styles.css" />
-  </head>
-
-  <body>
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="background">
     <nav>
-      <header>
-        <div class="logo-icon"></div>
-      </header>
+        <header>
+            <div class="logo-icon"></div>
+        </header>
 
-      <section class="nav-container">
-        <a href="#"class="nav-item">Home</a>
-        <a href="#our-profile"class="nav-item">Our Profile</a>
-        <a href="#"class="nav-item">Achievement</a>
-        <a href="#"class="nav-item">Message Us</a>
-      </section>
+        <section class="nav-container">
+            <a href="#home" class="nav-item">Home</a>
+            <a href="#our-profile" class="nav-item">Our Profile</a>
+            <a href="#achievement" class="nav-item">Achievement</a>
+            <a href="#message-us" class="nav-item">Message Us</a>
+        </section>
     </nav>
 
     <hr/>
 
     <main>
-        <article>
+        <article id="home">
             <header>
-                <h1>Welcome to Our Website</h1>
+                <h1 id="welcomeMessage">Welcome to Our Website</h1>
             </header>
 
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Ini adalah Website Pertama Saya!</p>
 
             <div class="banner-img"></div>
         </article>
@@ -42,40 +41,100 @@
 
             <section class="profile-container">
                 <div class="profile-item">
-                    <div class="profile-img"></div>
-
-                    <h2>Software Engineer</h2>
+                    <div class="visimisi-img"></div>
+                    <h2 class="toggle-button">Visi Misi</h2>
+                    <div class="content">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Visi</th>
+                                    <th>Misi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>"Menjadi solusi terbaik dalam menyediakan layanan dan produk berkualitas yang memberikan nilai tambah bagi masyarakat."</td>
+                                    <td>
+                                        <p>Mengutamakan kepuasan pelanggan melalui produk dan layanan berkualitas.</p>
+                                        <p>Membangun hubungan jangka panjang dengan pelanggan melalui kepercayaan dan integritas.</p>
+                                        <p>Terus berinovasi untuk menciptakan solusi yang relevan dan bermanfaat bagi masyarakat.</p>
+                                        <p>Memberdayakan tim untuk mencapai potensi maksimal dalam suasana kerja yang positif dan kolaboratif.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
 
                 <div class="profile-item">
-                    <div class="profile-img"></div>
-
-                    <h2>Software Engineer</h2>
+                    <div class="prinsip-img"></div>
+                    <h2 class="toggle-button">Prinsip</h2>
+                    <div class="content">
+                      <table>
+                        <thead>
+                          <tr>
+                            <th>Prinsip-prinsip kami mencakup integritas, inovasi, dan pelayanan pelanggan yang unggul</th>
+                          </tr>
+                        </thead>
+                      </table>
+                        <p>.</p>
+                    </div>
                 </div>
 
                 <div class="profile-item">
-                    <div class="profile-img"></div>
-
-                    <h2>Software Engineer</h2>
+                    <div class="tim-img"></div>
+                    <h2 class="toggle-button">Tim</h2>
+                    <div class="content">
+                      <table>
+                        <thead>
+                          <tr>
+                            <th>Tim kami terdiri dari individu yang berdedikasi dan berpengalaman di bidangnya masing-masing.</th>
+                          </tr>
+                        </thead>
+                      </table>
+                       
+                    </div>
                 </div>
-
             </section>
 
-           
-        <section>
-            <form>
+            <hr/>
 
-            </form>
+            <section id="message-us">
+                <div class="container">
+                    <div class="form-container">
+                        <h2>Message Us</h2>
+                        <form>
+                            <label for="name">Nama:</label>
+                            <input type="text" id="name" placeholder="Nama">
+                            <label for="dob">Tanggal Lahir:</label>
+                            <input type="date" id="dob">
+                            <label>Jenis Kelamin:</label>
+                            <label for="male">Laki-Laki</label>
+                            <input type="radio" id="male" name="gender" value="Laki-Laki" checked>
+                            <label for="female">Perempuan</label>
+                            <input type="radio" id="female" name="gender" value="Perempuan">
+                            <label for="message">Pesan:</label>
+                            <textarea id="message" placeholder="Pesan"></textarea>
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
 
-            <div></div>
-        </section>
+                    <div class="output-container">
+                        <p><strong>Current time:</strong> <span id="currentTime"></span></p>
+                        <p><strong>Nama:</strong> <span id="outputName">-</span></p>
+                        <p><strong>Tanggal Lahir:</strong> <span id="outputDob">-</span></p>
+                        <p><strong>Jenis Kelamin:</strong> <span id="outputGender">-</span></p>
+                        <p><strong>Pesan:</strong> <span id="outputMessage">-</span></p>
+                    </div>
+                </div>
+            </section>
+        </main>
 
-    </main>
+        <hr/>
+        <footer>
+            <p>Made by 2eight9</p>
+        </footer>
 
-
-<hr/>
-    <footer>
-        <p>Made by 2eight9</p>
-    </footer>
-  </body>
+        <script src="js/script.js"></script>
+    </body>
 </html>

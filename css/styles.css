@@ -1,55 +1,201 @@
-/* ini css */
-nav {
-    display :flex ;
-    align-items: center;
-    justify-content:space-between;
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #3c3a3ab2; /* Background untuk seluruh halaman */
 }
 
-.logo-icon { 
+/* Background untuk body */
+.background {
+    background-color: rgba(238, 103, 204, 0.16); /* Background color dengan transparansi */
+}
+
+/* Navigation Styles */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    padding: 10px;
+}
+
+.logo-icon {
     height: 48px;
     width: 48px;
-    background-image: url(https://picsum.photos/200);
+    background-image: url(https://media.istockphoto.com/id/1498666644/id/foto/awan-black-hole-render-berkualitas-tinggi.jpg?s=1024x1024&w=is&k=20&c=UO1V7xrVGTtf2iI3sGt6PBx12g6mhJ5iepaUgrcc4kc=);
     background-size: cover;
     border-radius: 50%;
 }
 
-.nav-item {
-    border: 1px solid;
-    color: black;
-    text-decoration: none;
-    font: size 16px;
-    font-weight: bold;
-    padding: 8px;
-    border-radius:8px;
-}
-
 .nav-container {
     display: flex;
+    flex-wrap: wrap; /* Agar elemen bisa pindah baris pada layar kecil */
 }
 
+.nav-item {
+    border: 1px solid #fff;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin: 0 5px;
+}
+
+.nav-item:hover {
+    background-color: #dbd8d8;
+}
+/* Banner Image */
 .banner-img {
-    height: 300px;
-    background-image: url(https://picsum.photos/298);
+    height: 500px;
+    background-image: url(https://img.freepik.com/free-photo/fuji-mountain-with-milky-way-night_335224-104.jpg?w=1380&t=st=1724768552~exp=1724769152~hmac=66ac782c971948f65047f7190dca04fff18936841b0b45cfb40ed9f51aaf32a0);
     background-position: center;
-    background-size:cover;
+    background-size: cover; /* Menggunakan cover untuk memastikan gambar menutupi area */
 }
-
-.profile-img {
-    height: 50px;
-    background-image: url(https://picsum.photos/298);
-    background-position: center;
-    background-size: cover;
-    border-radius: 50px;
-    width: 50px;
-}
-
-.profile-item {
-    height: 100px;
-    text-align: -webkit-center;
-}
-
+/* Profile Section */
 .profile-container {
     display: flex;
     justify-content: space-around;
-   
+    flex-wrap: wrap;
+    gap: 20px; /* Jarak antar item */
+}
+
+.profile-item {
+    flex: 1 
+    padding: 10px;
+    text-align: center;
+}
+
+.visimisi-img, .prinsip-img, .tim-img {
+    height: 50px;
+    width: 50px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.visimisi-img {
+    background-image: url(https://www.sditharum.sch.id/wp-content/uploads/2016/02/vision-mission.png);
+}
+
+.prinsip-img {
+    background-image: url(https://cimatri.com/wp-content/uploads/2022/06/114743325_s.jpg);
+}
+
+.tim-img {
+    background-image: url(https://www.earlyoil.ae/wp-content/uploads/2018/04/ourTeam-new-2.jpg);
+}
+/* Form and Output */
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px; /* Jarak antar container */
+    padding: 10px;
+}
+
+.form-container, .output-container {
+    border: 1px solid #040404;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="date"],
+textarea {
+    width: 88%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #020202;
+    border-radius: 5px;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+textarea {
+    height: 100px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.output-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    
+    margin: 10px;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align:justify; /* Perbaiki penyelarasan teks */
+}
+
+/* Hidden Content */
+.content {
+    display: none; /* Menyembunyikan konten awalnya */
+    margin-top: 8px;
+}
+
+.toggle-button {
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-item {
+        flex: 1 1 100%; /* Satu item per baris pada layar kecil */
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .form-container, .output-container {
+        width: 100%;
+    }
+
+    nav {
+        flex-direction: column; /* Menyusun item navigasi secara vertikal pada layar kecil */
+    }
+
+    .nav-container {
+        justify-content: center; /* Menyusun item navigasi di tengah */
+    }
 }
